@@ -12,9 +12,9 @@ const PricingSection = () => {
   return (
     <section
       id="pricing"
-      className="w-full lg:max-w-screen py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background/80 to-background"
+      className="w-full lg:max-w-5xl py-12 md:py-24 mx-auto lg:py-32 bg-gradient-to-b from-background/80 to-background"
     >
-      <div className="px-4 md:px-6">
+      <div className="w-full px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">

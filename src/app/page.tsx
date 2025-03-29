@@ -11,27 +11,26 @@ import ContactSection from "./_components/landingpage/contact-section";
 
 export default function Page() {
   return (
-    <div className="flex h-screen flex-col">
+    <>
       <Header />
-      <main className="flex-1">
-        <HeroSection />
 
-        <FeaturesSection />
+      <HeroSection />
 
-        <BenefitsSection />
+      <FeaturesSection />
 
-        <PricingSection />
+      <BenefitsSection />
 
-        <TestimonialsSection />
+      <PricingSection />
 
-        <FaqSection />
+      <TestimonialsSection />
 
-        <DemoSection />
+      <FaqSection />
 
-        <ContactSection />
-      </main>
+      <DemoSection />
+
+      <ContactSection />
 
       <Footer />
-    </div>
+    </>
   );
 }

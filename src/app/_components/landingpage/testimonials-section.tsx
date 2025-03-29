@@ -10,8 +10,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 const TestimonialsSection = () => {
   return (
-    <section className="w-full lg:max-w-screen py-12 md:py-24 lg:py-32">
-      <div className="px-4 md:px-6">
+    <section className="lg:max-w-5xl w-full mx-auto py-12 md:py-24 lg:py-32">
+      <div className="w-full px-6">
         <Tabs defaultValue="testimonials" className="w-full">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">

@@ -12,9 +12,9 @@ const DemoSection = () => {
   return (
     <section
       id="demo"
-      className="w-full lg:max-w-screen py-12 md:py-24 lg:py-32"
+      className="lg:max-w-5xl w-full mx-auto items-center justify-center flex flex-col py-12 md:py-24 lg:py-32"
     >
-      <div className="px-4 md:px-6">
+      <div className="px-6 w-full">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">

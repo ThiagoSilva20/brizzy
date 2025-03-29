@@ -1,23 +1,20 @@
 import Image from "next/image";
 
-import { InteractiveGrid } from "../ui/interactive-grid";
-import { ShineBorder } from "../ui/shine-border";
 import { Button } from "../ui/button";
 import { Play } from "lucide-react";
 import Link from "next/link";
+import GridLayout from "../ui/grid-layout";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen pt-32 pb-16 overflow-hidden bg-background">
-      <InteractiveGrid
-        containerClassName="absolute inset-0"
-        className="opacity-30"
-        points={40}
-      />
-
-      <ShineBorder
-        className="relative max-w-6xl mx-auto px-6 py-4"
-        borderClassName="border border-white/10 rounded-xl overflow-hidden"
+    <section className="relative min-h-screen pt-32 pb-16 lg:max-w-screen w-full px-6 overflow-hidden bg-background">
+      <GridLayout
+        crosshairs={{
+          topLeft: true,
+          bottomRight: true,
+        }}
+        lineVariant="none"
+        className="mt-10 p-6"
       >
         <div className="text-center mb-16 z-20">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
@@ -47,46 +44,41 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <ShineBorder
-          className="relative mx-auto"
-          borderClassName="border border-white/10 rounded-xl overflow-hidden"
-        >
-          <div className="relative">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hero%20image.jpg-mE5vAT4d864MlVhdkcrk1Vn2WcNONq.jpeg"
-              alt="Background Gradient"
-              width={1920}
-              height={1080}
-              className="w-full h-auto"
-              priority
-            />
-            <div className="absolute inset-0 flex items-end justify-center pb-16">
-              <div className="bg-black/20 backdrop-blur-sm p-4 rounded-xl w-[90%] h-[70%] flex">
-                <div className="flex-1 pr-2">
-                  <Image
-                    src="/brizzy.png"
-                    alt="Browser Preview"
-                    width={800}
-                    height={600}
-                    className="w-full h-full object-cover rounded-lg"
-                    priority
-                  />
-                </div>
-                <div className="flex-1 pl-2">
-                  <Image
-                    src="/brizzy.png"
-                    alt="Code Editor"
-                    width={800}
-                    height={600}
-                    className="w-full h-full object-cover rounded-lg"
-                    priority
-                  />
-                </div>
+        <div className="relative w-full">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hero%20image.jpg-mE5vAT4d864MlVhdkcrk1Vn2WcNONq.jpeg"
+            alt="Background Gradient"
+            width={1920}
+            height={1080}
+            className="w-full h-auto"
+            priority
+          />
+          <div className="absolute inset-0 flex items-end justify-center pb-16">
+            <div className="bg-black/20 backdrop-blur-sm p-4 rounded-xl w-[90%] h-[70%] flex">
+              <div className="flex-1 pr-2">
+                <Image
+                  src="/brizzy.png"
+                  alt="Browser Preview"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover rounded-lg"
+                  priority
+                />
+              </div>
+              <div className="flex-1 pl-2">
+                <Image
+                  src="/brizzy.png"
+                  alt="Code Editor"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover rounded-lg"
+                  priority
+                />
               </div>
             </div>
           </div>
-        </ShineBorder>
-      </ShineBorder>
+        </div>
+      </GridLayout>
     </section>
   );
 };

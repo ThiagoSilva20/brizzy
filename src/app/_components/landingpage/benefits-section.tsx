@@ -5,10 +5,10 @@ const BenefitsSection = () => {
   return (
     <section
       id="benefits"
-      className="w-full lg:max-w-screen py-12 md:py-24 lg:py-32"
+      className="lg:max-w-7xl w-full mx-auto py-12 md:py-24 lg:py-32"
     >
-      <div className="px-4 md:px-6">
-        <div className="grid gap-10 px-10 md:gap-16 lg:grid-cols-2">
+      <div className="px-6 w-full">
+        <div className="flex items-center justify-around flex-col lg:flex-row">
           <div className="space-y-4">
             <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
               Benefícios

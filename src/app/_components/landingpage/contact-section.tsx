@@ -4,9 +4,9 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="w-full lg:max-w-screen py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background/80 to-background"
+      className="lg:max-w-5xl mx-auto w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background/80 to-background"
     >
-      <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6">
+      <div className="grid items-center justify-center gap-4 text-center w-full px-6">
         <div className="space-y-3">
           <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
             Pronto para transformar seu suporte técnico?
