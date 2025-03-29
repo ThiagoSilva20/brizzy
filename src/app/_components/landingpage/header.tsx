@@ -1,13 +1,15 @@
-import { LifeBuoy } from "lucide-react";
+import { BoxesIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-muted bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex h-16 items-center justify-between px-4">
+    <header className="fixed top-0 z-50 w-full border-b border-muted bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="flex h-16 items-center justify-between px-8">
         <div className="flex items-center gap-2">
-          <LifeBuoy className="h-6 w-6 text-primary" />
+          <div className="bg-primary rounded-md p-1 size-9 justify-center flex items-center">
+            <BoxesIcon className="size-6 text-white" />
+          </div>
           <span className="text-xl font-bold">Brizzy Desk</span>
         </div>
         <nav className="hidden md:flex gap-6">
@@ -43,29 +45,11 @@ const Header = () => {
           </Link>
         </nav>
         <div className="flex items-center gap-4">
-          <Button asChild>
-            <Link href="#demo">Solicitar Demo</Link>
-          </Button>
           <Button variant="outline" size="sm" className="hidden md:flex">
             Entrar
           </Button>
-          <Button variant="ghost" size="sm" className="md:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
+          <Button>
+            <Link href="#demo">Solicitar Demo</Link>
           </Button>
         </div>
       </div>

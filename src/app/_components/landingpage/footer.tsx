@@ -1,4 +1,4 @@
-import { LifeBuoy } from "lucide-react";
+import { BoxesIcon } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -7,7 +7,9 @@ const Footer = () => {
       <div className="flex flex-col gap-6 py-12 px-4 md:px-6 md:flex-row md:justify-between">
         <div className="flex flex-col gap-6 md:w-1/3">
           <div className="flex items-center gap-2">
-            <LifeBuoy className="h-6 w-6 text-primary" />
+            <div className="bg-primary rounded-md p-1 size-9 justify-center flex items-center">
+              <BoxesIcon className="size-6 text-white" />
+            </div>
             <span className="text-xl font-bold">Brizzy Desk</span>
           </div>
           <p className="text-sm text-muted-foreground">
@@ -259,7 +261,7 @@ const Footer = () => {
             reservados.
           </p>
           <p className="text-xs text-muted-foreground">
-            Feito com ❤️ no Brasil
+            Feito por <span className="text-red-500">SYTI</span>
           </p>
         </div>
       </div>

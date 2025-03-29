@@ -49,9 +49,9 @@ const TestimonialsSection = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    "O Brizzy Desk transformou nossa operação de suporte.
+                    &quot;O Brizzy Desk transformou nossa operação de suporte.
                     Reduzimos o tempo de resolução em 40% e melhoramos
-                    significativamente a satisfação dos clientes."
+                    significativamente a satisfação dos clientes.&quot;
                   </p>
                 </CardContent>
               </Card>
@@ -75,9 +75,9 @@ const TestimonialsSection = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    "A automação do Brizzy Desk nos permitiu escalar nosso
+                    &quot;A automação do Brizzy Desk nos permitiu escalar nosso
                     suporte sem aumentar a equipe. A plataforma é intuitiva e
-                    extremamente poderosa."
+                    extremamente poderosa.&quot;
                   </p>
                 </CardContent>
               </Card>
@@ -99,9 +99,9 @@ const TestimonialsSection = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    "Implementamos o Brizzy Desk há 6 meses e já vimos um ROI
-                    impressionante. A base de conhecimento reduziu chamados
-                    repetitivos em 60%."
+                    &quot;Implementamos o Brizzy Desk há 6 meses e já vimos um
+                    ROI impressionante. A base de conhecimento reduziu chamados
+                    repetitivos em 60%.&quot;
                   </p>
                 </CardContent>
               </Card>

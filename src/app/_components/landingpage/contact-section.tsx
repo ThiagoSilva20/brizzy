@@ -4,7 +4,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="w-full lg:max-w-screen py-12 md:py-24 lg:py-32 bg-muted"
+      className="w-full lg:max-w-screen py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background/80 to-background"
     >
       <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6">
         <div className="space-y-3">
@@ -19,7 +19,7 @@ const ContactSection = () => {
         <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
           <Link
             href="#demo"
-            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-white shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
           >
             Solicitar Demo
           </Link>

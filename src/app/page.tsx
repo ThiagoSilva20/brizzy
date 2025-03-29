@@ -1,29 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
-import {
-  Check,
-  HelpCircle,
-  LifeBuoy,
-  MessageSquare,
-  PhoneCall,
-  Settings,
-  Users,
-} from "lucide-react";
-
-import { Button } from "@/app/_components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/app/_components/ui/card";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/app/_components/ui/tabs";
 import Header from "./_components/landingpage/header";
 import Footer from "./_components/landingpage/footer";
 import HeroSection from "./_components/landingpage/hero-section";

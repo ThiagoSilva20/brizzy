@@ -1,49 +1,92 @@
 import Image from "next/image";
+
+import { InteractiveGrid } from "../ui/interactive-grid";
+import { ShineBorder } from "../ui/shine-border";
+import { Button } from "../ui/button";
+import { Play } from "lucide-react";
 import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section
-      className="w-full lg:max-w-screen py-12 md:py-24 lg:py-32 xl:py-48"
-      id="home"
-    >
-      <div className="px-4">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          <div className="flex flex-col justify-center space-y-4">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Simplifique seu suporte técnico com Brizzy Desk
-              </h1>
-              <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                Plataforma completa de Help Desk para gerenciar chamados
-                técnicos, automatizar processos e melhorar a satisfação dos
-                clientes.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link
-                href="#demo"
-                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              >
+    <section className="relative min-h-screen pt-32 pb-16 overflow-hidden bg-background">
+      <InteractiveGrid
+        containerClassName="absolute inset-0"
+        className="opacity-30"
+        points={40}
+      />
+
+      <ShineBorder
+        className="relative max-w-6xl mx-auto px-6 py-4"
+        borderClassName="border border-white/10 rounded-xl overflow-hidden"
+      >
+        <div className="text-center mb-16 z-20">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+            Simplifique seu suporte técnico com
+            <br />
+            Brizzy Desk
+          </h1>
+          <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
+            Plataforma completa de Help Desk para gerenciar chamados técnicos,
+            automatizar processos e melhorar a satisfação dos clientes.
+          </p>
+          <div className="flex gap-4 justify-center">
+            <Button>
+              <Link href="#demo" className="flex items-center z-20">
                 Solicitar Demo
+                <Play className="size-4 ml-1" />
               </Link>
-              <Link
-                href="#features"
-                className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              >
+            </Button>
+            <Button
+              variant="secondary"
+              className="bg-white text-black hover:bg-gray-100"
+            >
+              <Link href="#features" className="z-20">
                 Saiba Mais
               </Link>
+            </Button>
+          </div>
+        </div>
+
+        <ShineBorder
+          className="relative mx-auto"
+          borderClassName="border border-white/10 rounded-xl overflow-hidden"
+        >
+          <div className="relative">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hero%20image.jpg-mE5vAT4d864MlVhdkcrk1Vn2WcNONq.jpeg"
+              alt="Background Gradient"
+              width={1920}
+              height={1080}
+              className="w-full h-auto"
+              priority
+            />
+            <div className="absolute inset-0 flex items-end justify-center pb-16">
+              <div className="bg-black/20 backdrop-blur-sm p-4 rounded-xl w-[90%] h-[70%] flex">
+                <div className="flex-1 pr-2">
+                  <Image
+                    src="/brizzy.png"
+                    alt="Browser Preview"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover rounded-lg"
+                    priority
+                  />
+                </div>
+                <div className="flex-1 pl-2">
+                  <Image
+                    src="/brizzy.png"
+                    alt="Code Editor"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover rounded-lg"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <Image
-            src="/placeholder.svg?height=550&width=550"
-            width={550}
-            height={550}
-            alt="Dashboard Brizzy Desk"
-            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
-          />
-        </div>
-      </div>
+        </ShineBorder>
+      </ShineBorder>
     </section>
   );
 };
