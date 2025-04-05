@@ -1,14 +1,21 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../_components/ui/tabs"
-import LoginForm from "../_components/login/login-form"
-import RegisterForm from "../_components/login/register-form"
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "../_components/ui/tabs";
+import LoginForm from "../_components/login/login-form";
+import RegisterForm from "../_components/login/register-form";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-black p-4">
-      <div className="w-full max-w-md space-y-8">
+    <div className="flex h-screen flex-col items-center justify-center bg-black p-4">
+      <div className="w-full max-w-lg space-y-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-white">Brizzy Desk</h1>
-          <p className="mt-2 text-sm text-zinc-400">Simplifique seu suporte técnico com nossa plataforma</p>
+          <p className="mt-2 text-sm text-zinc-400">
+            Simplifique seu suporte técnico com nossa plataforma
+          </p>
         </div>
 
         <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-6 shadow-xl">
@@ -30,7 +37,6 @@ export default function Home() {
           <p>© 2025 Brizzy Desk. Todos os direitos reservados.</p>
         </div>
       </div>
-    </main>
-  )
+    </div>
+  );
 }
-
