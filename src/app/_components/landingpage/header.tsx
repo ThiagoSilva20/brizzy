@@ -45,8 +45,8 @@ const Header = () => {
           </Link>
         </nav>
         <div className="flex items-center gap-4">
-          <Button variant="outline" size="sm" className="hidden md:flex">
-            Entrar
+          <Button variant="outline" size="sm" asChild className="hidden md:flex">
+            <Link href="../login">Entrar</Link>
           </Button>
           <Button>
             <Link href="#demo">Solicitar Demo</Link>
