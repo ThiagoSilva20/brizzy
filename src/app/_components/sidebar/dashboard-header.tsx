@@ -1,3 +1,4 @@
+"use client"
 import { Bell, ChevronDown, Search } from "lucide-react";
 import {
   Avatar,
@@ -16,8 +17,24 @@ import {
 } from "@/app/_components/ui/dropdown-menu";
 import { Input } from "@/app/_components/ui/input";
 import { SidebarTrigger } from "@/app/_components/ui/sidebar";
+import { signOut } from "next-auth/react";
+import { Session } from "next-auth";
 
-export function DashboardHeader() {
+type UserProps = {
+  user: Session["user"] | null;
+};
+
+export function DashboardHeader({ user }: UserProps) {
+  // Função para gerar iniciais do nome do usuário
+  const getInitials = (name: string | null | undefined): string => {
+    if (!name) return "U";
+    return name.charAt(0).toUpperCase();
+  };
+
+  // Verificando se há uma URL de imagem válida
+  const userImage = user?.image && user.image !== "" ? user.image : undefined;
+  const userName = user?.name || "Usuário";
+
   return (
     <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
       <SidebarTrigger />
@@ -41,17 +58,24 @@ export function DashboardHeader() {
               className="flex items-center gap-2 rounded-full p-1 px-2"
             >
               <Avatar className="h-8 w-8">
-                <AvatarImage
-                  src="/placeholder.svg?height=32&width=32"
-                  alt="Avatar"
-                />
-                <AvatarFallback>JD</AvatarFallback>
+                {userImage ? (
+                  <AvatarImage 
+                    src={userImage} 
+                    alt={`Avatar de ${userName}`}
+                    onError={(e) => {
+                      // Tratar erro de carregamento da imagem
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
+                  />
+                ) : null}
+                <AvatarFallback>{getInitials(user?.name)}</AvatarFallback>
               </Avatar>
               <div className="hidden flex-col items-start text-left md:flex">
-                <span className="text-sm font-medium">João Doe</span>
-                <span className="text-xs text-muted-foreground">
-                  Agente de Suporte
-                </span>
+                <span className="text-sm font-medium">{userName}</span>
+                {user?.email && (
+                  <span className="text-xs text-muted-foreground">{user.email}</span>
+                )}
               </div>
               <ChevronDown className="ml-2 h-4 w-4 text-muted-foreground" />
             </Button>
@@ -59,13 +83,11 @@ export function DashboardHeader() {
           <DropdownMenuContent align="end" className="w-56">
             <DropdownMenuLabel>Minha Conta</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuGroup>
-              <DropdownMenuItem>Perfil</DropdownMenuItem>
-              <DropdownMenuItem>Configurações</DropdownMenuItem>
-              <DropdownMenuItem>Equipe</DropdownMenuItem>
-            </DropdownMenuGroup>
+            <DropdownMenuItem asChild>
+              <a href="/workspace/configuracoes">Configurações</a>
+            </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Sair</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => signOut()}>Sair</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

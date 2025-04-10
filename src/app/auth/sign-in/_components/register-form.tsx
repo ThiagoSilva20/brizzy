@@ -3,10 +3,10 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Button } from "../ui/button"
-import { Input } from "../ui/input"
-import { Label } from "../ui/label"
-import { Checkbox } from "../ui/checkbox"
+import { Button } from "@/app/_components/ui/button"
+import { Input } from "@/app/_components/ui/input"
+import { Label } from "@/app/_components/ui/label"
+import { Checkbox } from "@/app/_components/ui/checkbox"
 import { Eye, EyeOff, Mail, Lock, User } from "lucide-react"
 
 export default function RegisterForm() {

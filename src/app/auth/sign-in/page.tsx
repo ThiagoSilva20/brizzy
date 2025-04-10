@@ -3,9 +3,9 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "../_components/ui/tabs";
-import LoginForm from "../_components/login/login-form";
-import RegisterForm from "../_components/login/register-form";
+} from "@/app/_components/ui/tabs";
+import LoginForm from "./_components/login-form";
+import RegisterForm from "./_components/register-form";
 
 export default function Home() {
   return (
